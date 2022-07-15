@@ -24,6 +24,7 @@ public class LoginPageTest extends BaseClass {
 		indexPage=new IndexPage(driver);
 		loginPage=indexPage.clickSigIn();
 		loginPage.userLogin("dharanimani2412@gmail.com", "12345");
+		System.out.println("hello");
 	}
 	
 
