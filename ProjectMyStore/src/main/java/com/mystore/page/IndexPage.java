@@ -50,7 +50,7 @@ public class IndexPage {
 	public SearchResultPage searchProduct(String value) {
 		Action.type(searchInputBox, value);
 		Action.click(driver, searchBtn);
-		return new SearchResultPage();
+		return new SearchResultPage(driver);
 	}
 
 }
