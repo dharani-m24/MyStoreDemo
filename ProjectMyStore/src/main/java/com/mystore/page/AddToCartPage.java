@@ -51,7 +51,9 @@ public class AddToCartPage {
 	}
 	
 	public OrderPage clickCheckOut() {
-		Action.click(driver, proceedToCheckOutBtn);
+		//Action.explicitWait(driver, 30, proceedToCheckOutBtn);
+		Action.fluentWait(driver, proceedToCheckOutBtn, 10);
+		Action.JSClick(driver, proceedToCheckOutBtn);
 		return new OrderPage(driver);
 	}
 	

@@ -33,6 +33,10 @@ public class HomePage extends BaseClass{
 		return status;
 	}
 	
+	public String getCurrURL()  {
+		String homePageURL=driver.getCurrentUrl();
+		return homePageURL;
+	}
 	
 
 }

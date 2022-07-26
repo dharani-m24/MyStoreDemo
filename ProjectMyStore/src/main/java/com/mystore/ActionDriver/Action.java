@@ -1,13 +1,23 @@
 package com.mystore.ActionDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Action {
@@ -83,6 +93,7 @@ public class Action {
 	 */
 
 	public static void type(WebElement element, String text) {
+		element.clear();
 		element.sendKeys(text);
 
 	}
@@ -124,6 +135,19 @@ public class Action {
 		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	
+	public static void fluentWait(WebDriver driver,WebElement element, int timeOut) {
+	    Wait<WebDriver> wait = null;
+	
+	        wait = new FluentWait<WebDriver>((WebDriver) driver)
+	        		.withTimeout(Duration.ofSeconds(20))
+	        	    .pollingEvery(Duration.ofSeconds(2))
+	        	    .ignoring(Exception.class);
+	        wait.until(ExpectedConditions.visibilityOf(element));
+	       // element.click();
+	    
+	   
+	}
 
 	/*
 	 * Frames
@@ -154,5 +178,17 @@ public class Action {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).build().perform();
 
+	}
+	
+	public static String screenShot(WebDriver driver, String fileName) throws IOException {
+		String date=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot screenshot=(TakesScreenshot) driver;
+		String destination=System.getProperty("user.dir")+"\\Screenshot\\"+fileName+"_"+date+".png";
+		File source=screenshot.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(source, new File(destination));
+		
+		return destination;
+		
+		
 	}
 }

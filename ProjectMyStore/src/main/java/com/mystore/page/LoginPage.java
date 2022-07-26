@@ -36,8 +36,16 @@ public class LoginPage {
 		Action.type(paasword, pwd);
 		Action.click(driver, signInBtn);
 		return new HomePage(driver);
+		
 	}
 	
+	public AddressPage userLoginFromOrderPage(String uname, String pwd)
+	{
+		Action.type(userName, uname);
+		Action.type(paasword, pwd);
+		Action.click(driver, signInBtn);
+		return new AddressPage(driver);
+	}
 	public AccountCreationPage createNewAccount(String email) {
 		Action.type(emailForNewAccount, email);
 		Action.click(driver, createNewAccountBtn);

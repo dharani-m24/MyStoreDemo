@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="189323" started-at="2022-07-17T16:59:18 IST" finished-at="2022-07-17T17:02:27 IST">
+  <suite name="Suite" duration-ms="99606" started-at="2022-07-25T19:06:03 IST" finished-at="2022-07-25T19:07:43 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="189323" started-at="2022-07-17T16:59:18 IST" finished-at="2022-07-17T17:02:27 IST">
-      <class name="com.mystore.testCases.AddToCartPageTest">
-        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.testCases.AddToCartPageTest@5ed828d]" name="loadConfig" is-config="true" duration-ms="19" started-at="2022-07-17T16:59:18 IST" finished-at="2022-07-17T16:59:18 IST">
+    <test name="Test" duration-ms="99606" started-at="2022-07-25T19:06:03 IST" finished-at="2022-07-25T19:07:43 IST">
+      <class name="com.mystore.testCases.LoginPageTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="loadConfig" is-config="true" duration-ms="649" started-at="2022-07-25T19:06:03 IST" finished-at="2022-07-25T19:06:03 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mystore.testCases.AddToCartPageTest@5ed828d]" name="setUp" is-config="true" duration-ms="60955" started-at="2022-07-17T16:59:18 IST" finished-at="2022-07-17T17:00:19 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="setUp" is-config="true" duration-ms="35028" started-at="2022-07-25T19:06:05 IST" finished-at="2022-07-25T19:06:40 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="addTocartTest()[pri:0, instance:com.mystore.testCases.AddToCartPageTest@5ed828d]" name="addTocartTest" duration-ms="127645" started-at="2022-07-17T17:00:19 IST" finished-at="2022-07-17T17:02:27 IST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="login(java.lang.String,java.lang.String)[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="login" duration-ms="18950" started-at="2022-07-25T19:06:40 IST" data-provider="loginData" finished-at="2022-07-25T19:06:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dharanimani2412@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-at org.junit.Assert.fail(Assert.java:92)
-at org.junit.Assert.assertTrue(Assert.java:43)
-at org.junit.Assert.assertTrue(Assert.java:54)
-at com.mystore.testCases.AddToCartPageTest.addTocartTest(AddToCartPageTest.java:38)
+              <![CDATA[java.lang.NullPointerException
+at com.mystore.testCases.LoginPageTest.login(LoginPageTest.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,11 +62,74 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addTocartTest -->
-      </class> <!-- com.mystore.testCases.AddToCartPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="closeBrowser" is-config="true" duration-ms="1607" started-at="2022-07-25T19:07:01 IST" finished-at="2022-07-25T19:07:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="setUp" is-config="true" duration-ms="25741" started-at="2022-07-25T19:07:02 IST" finished-at="2022-07-25T19:07:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="loginFailed(java.lang.String,java.lang.String)[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="loginFailed" duration-ms="13048" started-at="2022-07-25T19:07:28 IST" data-provider="loginDataforFailed" finished-at="2022-07-25T19:07:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dharanimani2412@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.mystore.testCases.LoginPageTest.loginFailed(LoginPageTest.java:67)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailed -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mystore.testCases.LoginPageTest@b7dd107]" name="closeBrowser" is-config="true" duration-ms="1028" started-at="2022-07-25T19:07:42 IST" finished-at="2022-07-25T19:07:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.mystore.testCases.LoginPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
